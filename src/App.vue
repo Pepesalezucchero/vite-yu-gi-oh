@@ -9,8 +9,11 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+
+  <AppHeader message="Yu-Gi-Oh! API" />
+
 </template>
+
 
 <style lang="scss">
 @use './styles/general.scss';

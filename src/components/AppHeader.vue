@@ -1,13 +1,14 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    props: ['message'],
 }
 </script>
 
 <template>
     <div class="header-container">
         <a href="#"><img src="../../public/img/Yu-Gi-Oh!_(Logo).jpg" alt="logo"></a>
-        <h1>Yu-Gi-Oh! API</h1>
+        <h1>{{ message }}</h1>
     </div>
 </template>
 
