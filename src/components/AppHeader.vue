@@ -6,6 +6,7 @@ export default {
 </script>
 
 <template>
+    <!-- intestazione pagina con logo e titolo -->
     <div class="header-container">
         <a href="#"><img src="../../public/img/Yu-Gi-Oh!_(Logo).jpg" alt="logo"></a>
         <h1>{{ message }}</h1>

@@ -1,16 +1,24 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppMain
   }
 }
 </script>
 
 <template>
 
-  <AppHeader message="Yu-Gi-Oh! API" />
+  <!-- intestazione pagina con logo e titolo -->
+  <header>
+    <AppHeader message="Yu-Gi-Oh! API" />
+  </header>
+  <main>
+    <AppMain />
+  </main>
 
 </template>
 
