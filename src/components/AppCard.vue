@@ -1,59 +1,22 @@
 <script>
+//importo store
+import{ store } from '../store';
+
 export default {
     name: 'AppCard',
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro fghf</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
-    </div>
-    <div class="card">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="carta">
-        <h3>ciao caro nome carta</h3>
-        <span>alinedjkv</span>
+    <div class="card" v-for="card in store.listCards" :key="card.id">
+        <img :src="card.card_images[0].image_url" :alt="card.id">
+        <h3>{{ card.name }}</h3>
+        <span>{{ card.archetype }}</span>
     </div>
 </template>
 

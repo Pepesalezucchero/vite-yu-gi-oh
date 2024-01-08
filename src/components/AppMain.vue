@@ -1,12 +1,13 @@
 <script>
 import AppCard from '../components/AppCard.vue'
+//importo store
+import{ store } from '../store';
 
 export default {
     name: 'AppMain',
     components: {
-    AppCard,
-    
-  }
+        AppCard,
+    },
 }
 </script>
 
