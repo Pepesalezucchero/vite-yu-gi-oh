@@ -21,42 +21,46 @@ export default {
 
     <!-- contenitore principale -->
     <div class="main-container">
+        <span><strong>Found ?? cards</strong></span>
+
         <div class="cards-container">
-            <span class="card-counter"><strong>Found ?? cards</strong></span>
-            <!-- singole carte -->
             <AppCard />
         </div>
     </div>
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
 select {
     cursor: pointer;
-    margin: 20px 0 20px 130px;
-    width: 130px;
-    padding: 7px;
+    margin: 25px 0 25px 130px;
+    width: 150px;
+    padding: 10px;
 }
 
 .main-container {
-    display: flex;
+    padding-top: 30px;
     width: 90%;
     margin: 0 auto;
-    min-height: 500px;
     background-color: white;
 }
 
 .cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 90%;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 
-.card-counter {
+span {
+    width: 90%;
+    margin: 0 auto;
     display: block;
-    padding: 20px;
-    background-color: $bg-minor-color;
+    padding: 20px 15px;
     color: $text-color;
- }
+    background-color: $bg-minor-color;
+}
 </style>

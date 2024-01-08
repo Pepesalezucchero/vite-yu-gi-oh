@@ -16,6 +16,7 @@ export default {
   <header>
     <AppHeader message="Yu-Gi-Oh! API" />
   </header>
+  <!-- contenuto principale della pagina -->
   <main>
     <AppMain />
   </main>
