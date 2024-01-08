@@ -1,0 +1,13 @@
+@use './partials/variables' as *;
+//font usato di fontsource
+@import 'node_modules/@fontsource/montserrat/index.css';
+@import 'node_modules/@fontsource/montserrat/700.css';
+
+* {
+    font-family: $main-font;
+    font-size: 16px;
+}
+
+body {
+    background-color: $bg-color;
+}
