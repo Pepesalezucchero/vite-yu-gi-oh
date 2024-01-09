@@ -1,5 +1,6 @@
 <script>
 import AppCard from '../components/AppCard.vue'
+import AppFilterCards from '../components/AppFilterCards.vue'
 //importo store
 import{ store } from '../store';
 
@@ -7,19 +8,13 @@ export default {
     name: 'AppMain',
     components: {
         AppCard,
+        AppFilterCards,
     },
 }
 </script>
 
 <template>
-    <!-- dropdown menu di scelta -->
-    <select>
-        <option>Alien</option>
-        <option>?</option>
-        <option>??</option>
-        <option>???</option>
-    </select>
-
+    <AppFilterCards />
     <!-- contenitore principale -->
     <div class="main-container">
         <span><strong>Found ?? cards</strong></span>
@@ -33,13 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
-
-select {
-    cursor: pointer;
-    margin: 25px 0 25px 130px;
-    width: 150px;
-    padding: 10px;
-}
 
 .main-container {
     padding-top: 30px;
