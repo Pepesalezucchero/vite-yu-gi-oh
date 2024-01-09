@@ -7,5 +7,7 @@ export const store = reactive ({
     //API degli archetipi e lista
     listArchetipes: [],
     apiCardsArchetipesUrl: "https://db.ygoprodeck.com/api/v7/archetypes.php",
-
+    //selezionatura del filtro
+    selectedFilter: "",
+    nameFilter: "archetype"
 });
