@@ -1,8 +1,6 @@
 <script>
 import AppCard from '../components/AppCard.vue'
 import AppFilterCards from '../components/AppFilterCards.vue'
-//importo store
-import{ store } from '../store';
 
 export default {
     name: 'AppMain',

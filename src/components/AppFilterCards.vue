@@ -4,16 +4,18 @@ import{ store } from '../store';
 
 export default {
     name: 'AppFilterCards',
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
     <!-- dropdown menu di scelta -->
     <select>
-        <option>Alien</option>
-        <option>?</option>
-        <option>??</option>
-        <option>???</option>
+        <option v-for="archetipe in store.listArchetipes">{{ archetipe.archetype_name }}</option>
     </select>
 </template>
 

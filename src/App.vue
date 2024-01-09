@@ -18,22 +18,37 @@ export default {
     }
   },
   methods: {
+    //prendo le informazioni dalle carte dalla API fornita 
+    getArchetipes() {
+      axios
+      .get(store.apiCardsArchetipesUrl)
+      .then((res => {
+        store.listArchetipes = res.data;
+      }))
+      //controllo errori
+      .catch((err) => {
+        console.log("Errori", err);
+      });
+    },
+    //prendo le informazioni dalle carte dalla API fornita 
     getCards() {
       axios
-        .get(store.apiCardsUrl)
-        .then((res => {
-          console.log(res.data.data);
-          store.listCards = res.data.data;
-        }))
-        .catch((err) => {
-          console.log("Errori", err);
-        });
+      .get(store.apiCardsUrl)
+      .then((res => {
+        console.log(res.data.data);
+        store.listCards = res.data.data;
+      }))
+      //controllo errori
+      .catch((err) => {
+        console.log("Errori", err);
+      });
     }
   },
 
-    created() {
-      this.getCards();
-    },
+  created() {
+    this.getCards();
+    this.getArchetipes();
+  },
 }
 </script>
 
