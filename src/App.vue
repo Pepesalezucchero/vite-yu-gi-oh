@@ -20,7 +20,7 @@ export default {
   methods: {
     getCards() {
       axios
-        .get(store.apiUrl)
+        .get(store.apiCardsUrl)
         .then((res => {
           console.log(res.data.data);
           store.listCards = res.data.data;

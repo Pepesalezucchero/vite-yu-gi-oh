@@ -14,6 +14,7 @@ export default {
 </script>
 
 <template>
+    <!-- dropdown menu di scelta -->
     <AppFilterCards />
     <!-- contenitore principale -->
     <div class="main-container">
