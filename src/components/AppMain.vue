@@ -24,11 +24,11 @@ export default {
       let myUrl = store.apiCardsUrl
 
       if(store.myUrl !== '') {
-        myUrl += `?${store.nameFilter}=${store.selectedFilter}`
+        myUrl += `&${store.nameFilter}=${store.selectedFilter}`
       }
       axios
 
-      .get(store.apiCardsUrl)
+      .get(myUrl)
       .then((res => {
         console.log(res.data.data);
         store.listCards = res.data.data;
